@@ -9,7 +9,7 @@ namespace Bank_Account
     abstract class Account
     {
         protected string accountNumber;
-        static decimal currentBalance;
+        protected decimal currentBalance;
         protected string accountType;
         protected decimal depositAmount;
         protected decimal withdrawAmount;
@@ -23,7 +23,6 @@ namespace Bank_Account
         public decimal CurrentBalance
         {
             get { return this.CurrentBalance; }
-            set { this.CurrentBalance = value; }
         }
 
         public string AccountType
@@ -31,33 +30,26 @@ namespace Bank_Account
             get { return this.accountNumber; }
             set { this.accountType = value; }
         }
-
-        public Account()
+     
+        public virtual void ViewAccountDetails()
         {
-
+            Console.WriteLine(accountType);
+            Console.WriteLine("Account # : " + accountNumber);
+            Console.WriteLine("Your account currently contains: $" + currentBalance);
         }
 
-        public void AccountOptions()
-        {
-            Console.WriteLine("a. Checking Account");
-            Console.WriteLine("b. Savings Account");
-        }
-
-        public virtual void ViewBalance()
-        {
-           Console.WriteLine("Your account currently contains: " + currentBalance);
-        }
-
-        public void DepositMoney()
+        public virtual void DepositMoney()
         {
             depositAmount = decimal.Parse(Console.ReadLine());
-            currentBalance =+ depositAmount;
+            currentBalance += depositAmount;
+            Console.WriteLine("Your updated current balance is: $" + currentBalance);
         }
 
-        public void WithdrawMoney()
+        public virtual void WithdrawMoney()
         {
             withdrawAmount = decimal.Parse(Console.ReadLine());
-            currentBalance =- withdrawAmount;
+            currentBalance -= withdrawAmount;
+            Console.WriteLine("Your updated current balance is: $" + currentBalance);
         }
     }
 }

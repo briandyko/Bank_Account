@@ -11,12 +11,30 @@ namespace Bank_Account
 
         public Checking_Account()
         {
-           
+            accountType = "--Checking Account-- ";
+            accountNumber = "538-32-2239931";
+            currentBalance = 10000.00m;
         }
 
-        public override void ViewBalance()
+        public override void ViewAccountDetails()
         {
-            base.ViewBalance();
+            base.ViewAccountDetails();
         }
+
+        public override void DepositMoney()
+        {
+            currentBalance = 10000.00m;
+            base.DepositMoney();
+        }
+
+        public override void WithdrawMoney()
+        {
+            currentBalance = 10000.00m;
+            base.WithdrawMoney();
+        }
+
+
+
+
     }
 }

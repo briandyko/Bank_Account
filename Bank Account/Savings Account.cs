@@ -18,12 +18,27 @@ namespace Bank_Account
         
         public Savings_Account()
         {
-         
+            accountType = "--Savings Account-- ";
+            accountNumber = "902-85-1464771";
+            currentBalance = 7200.00m;
         }
 
-        public override void ViewBalance()
+        public override void ViewAccountDetails()
         {
-            base.ViewBalance();
+            base.ViewAccountDetails();
         }
+
+        public override void DepositMoney()
+        {
+            currentBalance = 7200.00m;
+            base.DepositMoney();
+        }
+
+        public override void WithdrawMoney()
+        {
+            currentBalance = 7200.00m;
+            base.WithdrawMoney();
+        }
+
     }
 }
