@@ -8,5 +8,15 @@ namespace Bank_Account
 {
     class Checking_Account : Account
     {
+
+        public Checking_Account()
+        {
+           
+        }
+
+        public override void ViewBalance()
+        {
+            base.ViewBalance();
+        }
     }
 }
