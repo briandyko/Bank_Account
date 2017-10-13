@@ -46,7 +46,7 @@ namespace Bank_Account
                 {
                     savings1.ViewAccountDetails();
                 }
-              }
+            }
             else if (userChoice == 3)
             {
                 Console.WriteLine("Please type in the letter of the account you would like to make a deposit:");
@@ -81,9 +81,23 @@ namespace Bank_Account
                 {
                     Console.WriteLine("Please type in the amount your would like to withdraw:");
                     savings1.WithdrawMoney();
-                }
+                        while (savings1.CurrentBalance < savings1.MinimumBalance)
+                        {
+                        Console.WriteLine("User must maintain a minimum balance over $0.01.");
+                        Console.WriteLine("Please enter a valid amount.");
+                        }
 
+                }
             }
+            else if (userChoice == 5)
+            {
+                Console.WriteLine("Thank you for stopping by Whatever Bank!!!");
+            }
+            else
+            {
+                Console.WriteLine("Please choose from a valid selection.");
+            }
+                
 
 
 

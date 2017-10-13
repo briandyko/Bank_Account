@@ -15,12 +15,13 @@ namespace Bank_Account
             get { return this.minimumBalance; }
             set { this.minimumBalance = value; }
         }
-        
+
         public Savings_Account()
         {
             accountType = "--Savings Account-- ";
             accountNumber = "902-85-1464771";
             currentBalance = 7200.00m;
+            minimumBalance = 0.00m;
         }
 
         public override void ViewAccountDetails()
@@ -40,5 +41,15 @@ namespace Bank_Account
             base.WithdrawMoney();
         }
 
+        public bool KeepMinimum()
+        {
+            if (minimumBalance >= 0)
+            {
+                Console.WriteLine("The savings account must have a minimum balance of $0.01");
+                //please sent a valid value
+            }
+
+           
     }
+
 }
