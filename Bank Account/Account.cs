@@ -37,6 +37,7 @@ namespace Bank_Account
             Console.WriteLine(accountType);
             Console.WriteLine("Account # : " + accountNumber);
             Console.WriteLine("Your account currently contains: $" + currentBalance);
+            Console.WriteLine();
 
         }
 
@@ -45,6 +46,7 @@ namespace Bank_Account
             depositAmount = decimal.Parse(Console.ReadLine());
             currentBalance += depositAmount;
             Console.WriteLine("Your updated current balance is: $" + currentBalance);
+            Console.WriteLine();
         }
 
         // required abstract method

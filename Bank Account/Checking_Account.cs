@@ -31,6 +31,7 @@ namespace Bank_Account
             withdrawAmount = decimal.Parse(Console.ReadLine());
             currentBalance -= withdrawAmount;
             Console.WriteLine("Your updated current balance is: $" + currentBalance);
+            Console.WriteLine();
         }
 
 

@@ -41,6 +41,7 @@ namespace Bank_Account
             if (currentBalance >= minimumBalance)
             {
                 Console.WriteLine("Your updated current balance is: $" + currentBalance);
+                Console.WriteLine();
             }
             else
             {
