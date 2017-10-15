@@ -21,7 +21,7 @@ namespace Bank_Account
             accountType = "--Savings Account-- ";
             accountNumber = "902-85-1464771";
             currentBalance = 7200.00m;
-            minimumBalance = 0.00m;
+            minimumBalance = 0.01m;
         }
 
         public override void ViewAccountDetails()
@@ -31,25 +31,24 @@ namespace Bank_Account
 
         public override void DepositMoney()
         {
-            currentBalance = 7200.00m;
             base.DepositMoney();
         }
 
         public override void WithdrawMoney()
         {
-            currentBalance = 7200.00m;
-            base.WithdrawMoney();
-        }
-
-        public bool KeepMinimum()
-        {
-            if (minimumBalance >= 0)
+            withdrawAmount = decimal.Parse(Console.ReadLine());
+            currentBalance -= withdrawAmount;
+            if (currentBalance >= minimumBalance)
             {
-                Console.WriteLine("The savings account must have a minimum balance of $0.01");
-                //please sent a valid value
+                Console.WriteLine("Your updated current balance is: $" + currentBalance);
             }
-
-           
+            else
+            {
+                currentBalance += withdrawAmount;  // to balance out the erroneous withdrawal amount.
+                Console.WriteLine("Your Savings Account must have a minimum balance of $0.01");
+                Console.WriteLine("Please enter a valid amount to withdraw.");
+                WithdrawMoney();
+            }
+        }
     }
-
 }

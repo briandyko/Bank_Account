@@ -65,6 +65,8 @@ namespace Bank_Account
                     savings1.DepositMoney();
                 }
             }
+
+
             else if (userChoice == 4)
             {
                 Console.WriteLine("Please type in the letter of the account you would like to make a withdrawal:");
@@ -77,35 +79,36 @@ namespace Bank_Account
                     Console.WriteLine("Please type in the amount you would like to withdraw:");
                     checking1.WithdrawMoney();
                 }
+
                 else if (accountChoice == "b")
                 {
+
                     Console.WriteLine("Please type in the amount your would like to withdraw:");
                     savings1.WithdrawMoney();
-                        while (savings1.CurrentBalance < savings1.MinimumBalance)
-                        {
-                        Console.WriteLine("User must maintain a minimum balance over $0.01.");
-                        Console.WriteLine("Please enter a valid amount.");
-                        }
-
                 }
-            }
-            else if (userChoice == 5)
-            {
-                Console.WriteLine("Thank you for stopping by Whatever Bank!!!");
-            }
-            else
-            {
-                Console.WriteLine("Please choose from a valid selection.");
-            }
-                
+                //    if (savings1.CurrentBalance <= 0)
+
+                //    savings1.KeepMinimumPlease();            
 
 
 
+                else if (userChoice == 5)
+                {
+                    Console.WriteLine("Thank you for stopping by Whatever Bank!!!");
+                }
+                else
+                {
+                    Console.WriteLine("Please choose from a valid selection.");
+                }
+
+                // make way to say "Thank you for stopping by Whatever Bank" at the end of each choice instead of hardcoding it in everywhere??
+
+
+
+
+            }
 
 
         }
-
-
     }
 }
-

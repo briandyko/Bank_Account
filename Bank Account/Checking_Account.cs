@@ -23,14 +23,14 @@ namespace Bank_Account
 
         public override void DepositMoney()
         {
-            currentBalance = 10000.00m;
             base.DepositMoney();
         }
 
         public override void WithdrawMoney()
         {
-            currentBalance = 10000.00m;
-            base.WithdrawMoney();
+            withdrawAmount = decimal.Parse(Console.ReadLine());
+            currentBalance -= withdrawAmount;
+            Console.WriteLine("Your updated current balance is: $" + currentBalance);
         }
 
 
