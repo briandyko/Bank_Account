@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Bank_Account
 {
-    class Client
+    class Client : Account
     {
         private string userName;
         private string bankIdentificationNumber;
@@ -41,8 +41,15 @@ namespace Bank_Account
 
         public void GetInfo()
         {
-            Console.WriteLine("\n" + userName + "\n" + bankIdentificationNumber + "\n" + userBirthDate + "\n Thanks for being a loyal customer " + userName + "!");
+            Console.WriteLine("\n" + userName + "\n" + bankIdentificationNumber + "\n" + userBirthDate);
             Console.WriteLine();
+            Console.WriteLine("Thanks for being a loyal customer " + userName + "!");
+            Console.WriteLine();
+        }
+
+        public override void WithdrawMoney()
+        {
+            // here just because it has to be...no functionality
         }
 
 

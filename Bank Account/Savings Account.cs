@@ -40,12 +40,14 @@ namespace Bank_Account
             currentBalance -= withdrawAmount;
             if (currentBalance >= minimumBalance)
             {
+                Console.WriteLine();
                 Console.WriteLine("Your updated current balance is: $" + currentBalance);
                 Console.WriteLine();
             }
             else
             {
                 currentBalance += withdrawAmount;  // to balance out the erroneous withdrawal amount.
+                Console.WriteLine();
                 Console.WriteLine("Your Savings Account must have a minimum balance of $0.01");
                 Console.WriteLine("Please enter a valid amount to withdraw.");
                 WithdrawMoney();
