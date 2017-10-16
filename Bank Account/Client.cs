@@ -19,27 +19,24 @@ namespace Bank_Account
         public object GenericUser
         {
             get { return this.genericUser; }
-            set { this.genericUser = value; }
         }
 
         public string BankIdentificationNumber
         {
             get { return this.bankIdentificationNumber; }
-            set { this.bankIdentificationNumber = value; }
         }
 
         public string CustomerYears
         {
             get { return this.CustomerYears; }
-            set { this.CustomerYears = value; }
         }
 
         //Constructor
 
         public Client()
-        {   bankIdentificationNumber = "Customer ID: 4931bvX2984z";
+        {
+            bankIdentificationNumber = "Customer ID: 4931bvX2984z";
             customerYears = "Whatever Bank customer for 8 years!";
-
         }
 
         //Methods

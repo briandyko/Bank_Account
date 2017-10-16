@@ -14,7 +14,7 @@ namespace Bank_Account
         protected string accountNumber;
         protected decimal currentBalance;
         protected string accountType;
-        protected decimal depositAmount;
+        private decimal depositAmount;
         protected decimal withdrawAmount;
 
         // Properties
@@ -28,19 +28,16 @@ namespace Bank_Account
         public string AccountNumber
         {
             get { return this.accountNumber; }
-            set { this.accountNumber = value; }
         }
         
         public decimal CurrentBalance
         {
             get { return this.CurrentBalance; }
-            set { this.currentBalance = value; }
         }
 
         public string AccountType
         {
             get { return this.accountNumber; }
-            set { this.accountType = value; }
         }
 
         // Methods

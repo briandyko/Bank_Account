@@ -10,14 +10,13 @@ namespace Bank_Account
     {
         // field
 
-        protected decimal minimumBalance;
+        private decimal minimumBalance;
 
         // Property
 
         public decimal MinimumBalance
         {
             get { return this.minimumBalance; }
-            set { this.minimumBalance = value; }
         }
 
         // Constructor

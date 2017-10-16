@@ -25,7 +25,7 @@ namespace Bank_Account
             //Generic Coroporate Bank Welcome Screen
             Console.WriteLine("Welcome to Whatever Bank!");
 
-            bool perpectualMenu = true;  // variable necessary for program running until "exit" in do-while loop
+            bool perpetualMenu = true;  // variable necessary for program running until "exit" in do-while loop
 
             do
             {
@@ -41,7 +41,7 @@ namespace Bank_Account
 
                 if (userChoice == 5)
                 {
-                   perpectualMenu = false;    // to make do-while loop run
+                   perpetualMenu = false;    // to make do-while loop run
                 }
 
                 string accountChoice;  // to store input from view account balance, deposit funds, and withdraw funds 
@@ -155,7 +155,7 @@ namespace Bank_Account
 
             }
 
-            while (perpectualMenu == true);  // ends do-while loop for program running until "exit"
+            while (perpetualMenu == true);  // ends do-while loop for program running until "exit"
             
         }
 
