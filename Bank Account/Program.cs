@@ -11,6 +11,12 @@ namespace Bank_Account
         static void Main(string[] args)
         {
             // login screen
+            Console.WriteLine("Please login by providing your name to determine if you are a member of this bank.");
+            Client genericUser = new Client();
+            genericUser.UserName = Console.ReadLine();
+            //genericUser.LogIn();
+
+
 
 
             //

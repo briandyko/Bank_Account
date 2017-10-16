@@ -8,7 +8,7 @@ namespace Bank_Account
 {
     class Client : Account
     {
-        private string userName;
+        protected string userName;
         private string bankIdentificationNumber;
         private string userBirthDate;
 
@@ -52,6 +52,9 @@ namespace Bank_Account
             // here just because it has to be...no functionality
         }
 
-
+        //public override object LogIn()
+        //{
+        //    return base.LogIn();
+        //}
     }
 }

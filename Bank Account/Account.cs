@@ -13,6 +13,7 @@ namespace Bank_Account
         protected string accountType;
         protected decimal depositAmount;
         protected decimal withdrawAmount;
+        protected object genericUser;
 
         public string AccountNumber
         {
@@ -30,6 +31,12 @@ namespace Bank_Account
         {
             get { return this.accountNumber; }
             set { this.accountType = value; }
+        }
+
+        public object GenericUser
+        {
+            get { return this.genericUser; }
+            set { this.genericUser = value; }
         }
      
         public virtual void ViewAccountDetails()
@@ -54,6 +61,18 @@ namespace Bank_Account
         // required abstract method
 
         public abstract void WithdrawMoney();
-    
+
+
+        // login method
+
+        //public virtual object LogIn()
+        //{
+        //    Client genericUser = new Client();
+        //    genericUser.UserName = Console.ReadLine();
+        //    return genericUser.UserName;
+
+        //}
+
+
     }
 }
