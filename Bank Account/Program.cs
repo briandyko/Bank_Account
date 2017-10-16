@@ -11,24 +11,21 @@ namespace Bank_Account
         static void Main(string[] args)
         {
             // login screen
-            Console.WriteLine("Please login by providing your name to determine if you are a member of this bank.");
+
+            Console.WriteLine("Please login by providing your name to determine if you are a member \n of Whatever Bank:");
+
+            // instantiating the needed objects
+
             Client genericUser = new Client();
             genericUser.UserName = Console.ReadLine();
-            //genericUser.LogIn();
 
-
-
-
-            //
-
-            Client groverCleveland = new Client();
             Checking_Account checking1 = new Checking_Account();
             Savings_Account savings1 = new Savings_Account();
 
             //Generic Coroporate Bank Welcome Screen
             Console.WriteLine("Welcome to Whatever Bank!");
 
-            bool perpectualMenu = true;  // for program running until "exit"
+            bool perpectualMenu = true;  // variable necessary for program running until "exit" in do-while loop
 
             do
             {
@@ -44,7 +41,7 @@ namespace Bank_Account
 
                 if (userChoice == 5)
                 {
-                   perpectualMenu = false;
+                   perpectualMenu = false;    // to make do-while loop run
                 }
 
                 string accountChoice;  // to store input from view account balance, deposit funds, and withdraw funds 
@@ -53,7 +50,9 @@ namespace Bank_Account
 
                 if (userChoice == 1)
                 {
-                    groverCleveland.GetInfo();
+                    Console.WriteLine();
+                    Console.WriteLine(genericUser.UserName);
+                    genericUser.GetInfo();
                 }
 
                 // View Account Balance

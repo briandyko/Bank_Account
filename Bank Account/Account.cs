@@ -8,12 +8,22 @@ namespace Bank_Account
 {
     abstract class Account
     {
+        // field
+
+        protected string userName;
         protected string accountNumber;
         protected decimal currentBalance;
         protected string accountType;
         protected decimal depositAmount;
         protected decimal withdrawAmount;
-        protected object genericUser;
+
+        // Properties
+        
+        public string UserName
+        {
+            get { return this.userName; }
+            set { this.userName = value; }
+        }
 
         public string AccountNumber
         {
@@ -33,11 +43,7 @@ namespace Bank_Account
             set { this.accountType = value; }
         }
 
-        public object GenericUser
-        {
-            get { return this.genericUser; }
-            set { this.genericUser = value; }
-        }
+        // Methods
      
         public virtual void ViewAccountDetails()
         {
@@ -63,16 +69,7 @@ namespace Bank_Account
         public abstract void WithdrawMoney();
 
 
-        // login method
-
-        //public virtual object LogIn()
-        //{
-        //    Client genericUser = new Client();
-        //    genericUser.UserName = Console.ReadLine();
-        //    return genericUser.UserName;
-
-        //}
-
+        }
 
     }
-}
+

@@ -8,13 +8,19 @@ namespace Bank_Account
 {
     class Savings_Account : Account
     {
+        // field
+
         protected decimal minimumBalance;
+
+        // Property
 
         public decimal MinimumBalance
         {
             get { return this.minimumBalance; }
             set { this.minimumBalance = value; }
         }
+
+        // Constructor
 
         public Savings_Account()
         {
@@ -23,6 +29,8 @@ namespace Bank_Account
             currentBalance = 7200.00m;
             minimumBalance = 0.01m;
         }
+
+        // Methods
 
         public override void ViewAccountDetails()
         {

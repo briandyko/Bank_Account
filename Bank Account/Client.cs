@@ -8,15 +8,18 @@ namespace Bank_Account
 {
     class Client : Account
     {
-        protected string userName;
-        private string bankIdentificationNumber;
-        private string userBirthDate;
+        // field
 
-        
-        public string UserName
+        protected object genericUser;
+        private string bankIdentificationNumber;
+        private string customerYears;
+
+        // Properties
+
+        public object GenericUser
         {
-            get { return this.userName; }
-            set { this.userName = value; }   // do i need sets for any of these three values? I don't really want them setting it, at least not yet (stretch task).
+            get { return this.genericUser; }
+            set { this.genericUser = value; }
         }
 
         public string BankIdentificationNumber
@@ -25,36 +28,36 @@ namespace Bank_Account
             set { this.bankIdentificationNumber = value; }
         }
 
-        public string UserBirthDate
+        public string CustomerYears
         {
-            get { return this.userBirthDate; }
-            set { this.userBirthDate = value; }
+            get { return this.CustomerYears; }
+            set { this.CustomerYears = value; }
         }
+
+        //Constructor
 
         public Client()
-        {
-            userName = "Grover Cleveland";                // for now this can be hardcoded in, but maybe I'll need to console.readline it for the stretch task.
-            bankIdentificationNumber = "Customer ID: 4931bvX2984z";
-            userBirthDate = "03 / 18 / 1837";
+        {   bankIdentificationNumber = "Customer ID: 4931bvX2984z";
+            customerYears = "Whatever Bank customer for 8 years!";
 
         }
+
+        //Methods
 
         public void GetInfo()
         {
-            Console.WriteLine("\n" + userName + "\n" + bankIdentificationNumber + "\n" + userBirthDate);
+            Console.WriteLine(bankIdentificationNumber + "\n" + customerYears);
             Console.WriteLine();
-            Console.WriteLine("Thanks for being a loyal customer " + userName + "!");
+            Console.WriteLine("Thanks for being a loyal customer " + "!");
             Console.WriteLine();
         }
 
         public override void WithdrawMoney()
         {
-            // here just because it has to be...no functionality
+            // here just because it has to be since it's a derived class of Account.
         }
 
-        //public override object LogIn()
-        //{
-        //    return base.LogIn();
-        //}
+        
+
     }
 }

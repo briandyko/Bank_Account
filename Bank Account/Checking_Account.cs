@@ -8,6 +8,7 @@ namespace Bank_Account
 {
     class Checking_Account : Account
     {
+        // Constructor
 
         public Checking_Account()
         {
@@ -15,6 +16,8 @@ namespace Bank_Account
             accountNumber = "538-32-2239931";
             currentBalance = 10000.00m;
         }
+
+        // Methods
 
         public override void ViewAccountDetails()
         {
@@ -34,9 +37,6 @@ namespace Bank_Account
             Console.WriteLine("Your updated current balance is: $" + currentBalance);
             Console.WriteLine();
         }
-
-
-
 
     }
 }
